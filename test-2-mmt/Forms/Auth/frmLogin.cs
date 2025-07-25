@@ -85,7 +85,7 @@ namespace test_2_mmt
                     }
                     else
                     {
-                        frmNhanVien staffForm = new frmNhanVien();
+                        frmNhanVien staffForm = new frmNhanVien(user.MANHANVIEN);
                         staffForm.Show();
                         this.Hide();
                     }

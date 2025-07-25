@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\NV-HeThong\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NV-HeThong\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\DONDATHANG_MATHANG.cs" />
     <Compile Include="Models\DON_DAT_HANG.cs" />
     <Compile Include="Models\HOADON_MATHANG.cs" />
@@ -69,34 +75,37 @@
     <Compile Include="Models\Model1.cs" />
     <Compile Include="Models\NHAN_VIEN.cs" />
     <Compile Include="Models\NHA_CUNG_CAP.cs" />
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Forms\Auth\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Forms\Auth\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNhanVien.cs">
+    <Compile Include="Forms\Auth\frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhanVien.Designer.cs">
+    <Compile Include="Forms\Auth\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPhanQuyenUser.cs">
+    <Compile Include="Forms\Admin\frmPhanQuyenUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPhanQuyenUser.Designer.cs">
+    <Compile Include="Forms\Admin\frmPhanQuyenUser.Designer.cs">
       <DependentUpon>frmPhanQuyenUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Forms\Auth\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNhanVien.resx">
+    <EmbeddedResource Include="Forms\Auth\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPhanQuyenUser.resx">
+    <EmbeddedResource Include="Forms\Admin\frmPhanQuyenUser.resx">
       <DependentUpon>frmPhanQuyenUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NV-HeThong\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +139,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\up1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\NV-BanHang\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using test_2_mmt.Forms.NV_HeThong;
 
 namespace test_2_mmt
 {
     public partial class frmNhanVien : Form
     {
-        public frmNhanVien()
+        private string maNhanVienDangNhap;
+
+        public frmNhanVien(string maNV)
         {
             InitializeComponent();
+            this.maNhanVienDangNhap = maNV;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -22,13 +26,22 @@ namespace test_2_mmt
             DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                this.Hide(); // Ẩn form hiện tại
-
-                frmLogin loginForm = new frmLogin(); // Tạo lại form đăng nhập
-                loginForm.Show(); // Hiện form đăng nhập
-
-                this.Close(); // Đóng hẳn form hiện tại sau khi loginForm hiển thị
+                this.Hide();
+                frmLogin loginForm = new frmLogin();
+                loginForm.Show(); 
+                this.Close();
             }
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDoiMatKhau frm = new frmDoiMatKhau(maNhanVienDangNhap);
+            frm.ShowDialog();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
