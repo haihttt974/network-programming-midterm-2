@@ -7,7 +7,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
-using test_2_mmt.Data_;
+using test_2_mmt.Models;
 
 namespace test_2_mmt
 {

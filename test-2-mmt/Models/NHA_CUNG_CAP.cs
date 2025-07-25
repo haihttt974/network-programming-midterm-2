@@ -1,4 +1,4 @@
-namespace test_2_mmt.Data_
+namespace test_2_mmt.Models
 {
     using System;
     using System.Collections.Generic;

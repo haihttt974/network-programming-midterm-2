@@ -1,4 +1,4 @@
-namespace test_2_mmt.Data_
+namespace test_2_mmt.Models
 {
     using System;
     using System.Collections.Generic;
@@ -6,30 +6,31 @@ namespace test_2_mmt.Data_
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class HOA_DON
+    public partial class DON_DAT_HANG
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public HOA_DON()
+        public DON_DAT_HANG()
         {
-            HOADON_MATHANG = new HashSet<HOADON_MATHANG>();
+            DONDATHANG_MATHANG = new HashSet<DONDATHANG_MATHANG>();
         }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MAHOADON { get; set; }
+        public int MADDH { get; set; }
 
-        public DateTime? NGAYLAP { get; set; }
+        [StringLength(5)]
+        public string MANCC { get; set; }
+
+        public DateTime? NGAYDAT { get; set; }
 
         [StringLength(4)]
-        public string MANHANVIEN { get; set; }
+        public string MANV { get; set; }
 
-        public int? MAKH { get; set; }
-
-        public virtual KHACH_HANG KHACH_HANG { get; set; }
+        public virtual NHA_CUNG_CAP NHA_CUNG_CAP { get; set; }
 
         public virtual NHAN_VIEN NHAN_VIEN { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HOADON_MATHANG> HOADON_MATHANG { get; set; }
+        public virtual ICollection<DONDATHANG_MATHANG> DONDATHANG_MATHANG { get; set; }
     }
 }

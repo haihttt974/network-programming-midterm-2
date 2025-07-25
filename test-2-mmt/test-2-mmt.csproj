@@ -59,16 +59,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data_\DONDATHANG_MATHANG.cs" />
-    <Compile Include="Data_\DON_DAT_HANG.cs" />
-    <Compile Include="Data_\HOADON_MATHANG.cs" />
-    <Compile Include="Data_\HOA_DON.cs" />
-    <Compile Include="Data_\KHACH_HANG.cs" />
-    <Compile Include="Data_\LOAI_MAT_HANG.cs" />
-    <Compile Include="Data_\MAT_HANG.cs" />
-    <Compile Include="Data_\Model1.cs" />
-    <Compile Include="Data_\NHAN_VIEN.cs" />
-    <Compile Include="Data_\NHA_CUNG_CAP.cs" />
+    <Compile Include="Models\DONDATHANG_MATHANG.cs" />
+    <Compile Include="Models\DON_DAT_HANG.cs" />
+    <Compile Include="Models\HOADON_MATHANG.cs" />
+    <Compile Include="Models\HOA_DON.cs" />
+    <Compile Include="Models\KHACH_HANG.cs" />
+    <Compile Include="Models\LOAI_MAT_HANG.cs" />
+    <Compile Include="Models\MAT_HANG.cs" />
+    <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\NHAN_VIEN.cs" />
+    <Compile Include="Models\NHA_CUNG_CAP.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>

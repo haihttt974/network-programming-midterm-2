@@ -1,4 +1,4 @@
-namespace test_2_mmt.Data_
+namespace test_2_mmt.Models
 {
     using System;
     using System.Collections.Generic;
@@ -6,23 +6,23 @@ namespace test_2_mmt.Data_
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class HOADON_MATHANG
+    public partial class DONDATHANG_MATHANG
     {
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MAHD { get; set; }
+        public int MADDH { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [StringLength(5)]
         public string MAMH { get; set; }
 
-        public int? SOLUONGMUA { get; set; }
+        public int? SOLUONG { get; set; }
 
-        public double? THANHTIEN { get; set; }
+        public double? DONGIA { get; set; }
 
-        public virtual HOA_DON HOA_DON { get; set; }
+        public virtual DON_DAT_HANG DON_DAT_HANG { get; set; }
 
         public virtual MAT_HANG MAT_HANG { get; set; }
     }

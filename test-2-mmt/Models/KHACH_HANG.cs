@@ -1,4 +1,4 @@
-namespace test_2_mmt.Data_
+namespace test_2_mmt.Models
 {
     using System;
     using System.Collections.Generic;
@@ -6,24 +6,30 @@ namespace test_2_mmt.Data_
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class LOAI_MAT_HANG
+    public partial class KHACH_HANG
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public LOAI_MAT_HANG()
+        public KHACH_HANG()
         {
-            MAT_HANG = new HashSet<MAT_HANG>();
+            HOA_DON = new HashSet<HOA_DON>();
         }
 
         [Key]
-        [StringLength(5)]
-        public string MALOAI { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MAKH { get; set; }
 
-        [StringLength(50)]
-        public string TENLOAI { get; set; }
+        [StringLength(30)]
+        public string TENKH { get; set; }
+
+        [StringLength(5)]
+        public string GIOITINH { get; set; }
+
+        [StringLength(10)]
+        public string SDT { get; set; }
 
         public bool? VOHIEUHOA { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MAT_HANG> MAT_HANG { get; set; }
+        public virtual ICollection<HOA_DON> HOA_DON { get; set; }
     }
 }
