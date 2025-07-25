@@ -29,6 +29,8 @@ namespace test_2_mmt
         {
             InitializeComponent();
             dbContext = new Model1();
+            txtPass.UseSystemPasswordChar = true;
+            chkShowPassword.Checked = false;
         }
 
         private string GetMD5Hash(string input)
@@ -102,6 +104,11 @@ namespace test_2_mmt
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = !chkShowPassword.Checked;
         }
     }
 }
