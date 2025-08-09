@@ -337,7 +337,7 @@ namespace test_2_mmt
             {
                 dbContext.SaveChanges();
                 MessageBox.Show("Cập nhật nhân viên thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadEmployeeData(); // Refresh lại dữ liệu trên grid
+                LoadEmployeeData(); // Refresh lại dữ liệu trên grid    
             }
             catch (DbEntityValidationException ex)
             {
@@ -368,6 +368,17 @@ namespace test_2_mmt
             txtSearchQL.Leave += txtSearchQL_Leave;
             txtSearchBH.Enter += txtSearchBH_Enter;
             txtSearchBH.Leave += txtSearchBH_Leave;
+
+            dgvQLNhanVienBH.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvQLNhanVienQL.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvQLNhanVienBH.MultiSelect = false; // Chỉ cho chọn 1 dòng
+            dgvQLNhanVienQL.MultiSelect = false; // Chỉ cho chọn 1 dòng
+            dgvQLNhanVienBH.ReadOnly = true;               // Toàn bộ dgv không cho sửa
+            dgvQLNhanVienQL.ReadOnly = true;               // Toàn bộ dgv không cho sửa
+            dgvQLNhanVienBH.AllowUserToAddRows = false;    // Không cho thêm dòng trống cuối
+            dgvQLNhanVienQL.AllowUserToAddRows = false;    // Không cho thêm dòng trống cuối
+            dgvQLNhanVienBH.AllowUserToDeleteRows = false; // Không cho xóa dòng bằng phím Delete
+            dgvQLNhanVienQL.AllowUserToDeleteRows = false; // Không cho xóa dòng bằng phím Delete
         }
 
         private void txtSearchBH_Enter(object sender, EventArgs e)

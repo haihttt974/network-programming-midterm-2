@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using test_2_mmt.Models;
+using test_2_mmt.Globals;
 
 namespace test_2_mmt
 {
@@ -74,6 +75,10 @@ namespace test_2_mmt
                         MessageBox.Show("Tài khoản đã bị vô hiệu hóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
+
+                    LoggedInUser.MaNhanVien = user.MANHANVIEN;
+                    LoggedInUser.TenNhanVien = user.TENNHANVIEN;
+                    LoggedInUser.LaQuanLy = user.LAQUANLY ?? false;
 
                     MessageBox.Show($"Xin chào {(user.LAQUANLY == true ? "quản lý" : "nhân viên bán hàng")}!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

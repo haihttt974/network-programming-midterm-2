@@ -59,12 +59,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\NV-BanHang\frmTaoHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NV-BanHang\frmTaoHoaDon.Designer.cs">
+      <DependentUpon>frmTaoHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\NV-HeThong\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\NV-HeThong\frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NV-KhachHang\frmThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NV-KhachHang\frmThemKhachHang.Designer.cs">
+      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals\LoggedInUser.cs" />
     <Compile Include="Models\DONDATHANG_MATHANG.cs" />
     <Compile Include="Models\DON_DAT_HANG.cs" />
     <Compile Include="Models\HOADON_MATHANG.cs" />
@@ -104,8 +117,14 @@
     <EmbeddedResource Include="Forms\Admin\frmPhanQuyenUser.resx">
       <DependentUpon>frmPhanQuyenUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NV-BanHang\frmTaoHoaDon.resx">
+      <DependentUpon>frmTaoHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\NV-HeThong\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NV-KhachHang\frmThemKhachHang.resx">
+      <DependentUpon>frmThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -140,9 +159,7 @@
   <ItemGroup>
     <None Include="Resources\up1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\NV-BanHang\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

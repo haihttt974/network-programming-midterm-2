@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using test_2_mmt.Forms.NV_BanHang;
 using test_2_mmt.Forms.NV_HeThong;
 
 namespace test_2_mmt
@@ -42,6 +43,12 @@ namespace test_2_mmt
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tạoHóaĐơnMớToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmTaoHoaDon();
+            frm.ShowDialog();
         }
     }
 }
